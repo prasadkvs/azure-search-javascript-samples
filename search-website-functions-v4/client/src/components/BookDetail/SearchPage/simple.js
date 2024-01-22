@@ -50,13 +50,13 @@ export default function BookCardSimple({ document }) {
         <StyledCardContentImage>
           <StyledImg
             image={document.image_url}
-            title={document.original_title}
-            alt={document.original_title}
+            title={document.escbase_title}
+            alt={document.escbase_title}
           />
         </StyledCardContentImage>
         <CardContent>
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-            {shortenTitle(document.original_title)}
+            {shortenTitle(document.escbase_title)}
           </Typography>
         </CardContent>
       </StyledCardActionArea>

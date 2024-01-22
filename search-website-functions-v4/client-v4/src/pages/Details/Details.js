@@ -41,12 +41,13 @@ export default function Details() {
       resultStyle += " active";
       detailsBody = (
         <div className="card-body">
-          <h5 className="card-title">{document.original_title}</h5>
-          <img className="image" src={document.image_url} alt="Book cover"></img>
-          <p className="card-text">{document.authors?.join('; ')} - {document.original_publication_year}</p>
-          <p className="card-text">ISBN {document.isbn}</p>
+          <h5 className="card-title">{document.escbase_title}</h5>
+          <img className="image" src={logo} alt="logo"></img>
+          <p className="card-text">{document.ESC_AHTOPICS?.join('; ')} - {document.ESC_AHCONTENTTYPE}</p>
+          <p className="card-text">{document.ESC_body}</p>
+          <p className="card-text">URL {document.escbase_url}</p>
           <Rating name="half-rating-read" value={parseInt(document.average_rating)} precision={0.1} readOnly></Rating>
-          <p className="card-text">{document.ratings_count} Ratings</p>
+          <p className="card-text">{document.escbase_size} Size</p>
         </div>
       );
     }

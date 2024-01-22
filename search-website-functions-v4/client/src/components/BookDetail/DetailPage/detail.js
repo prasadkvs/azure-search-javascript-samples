@@ -60,23 +60,24 @@ export default function BookCardDetail({ document }) {
   return (
     <StyledCard className="bookdetail-parent">
       <StyledCardContent className="bookdetail-child" align="center">
-        <StyledTypographyTitle>{document.original_title}</StyledTypographyTitle>
+        <StyledTypographyTitle>{document.escbase_title}</StyledTypographyTitle>
         <StyledCardMedia
-          image={document.image_url}
-          title={document.original_title}
-          alt={document.original_title}
+          image={logo192.png}
+          title={document.escbase_title}
+          alt={document.escabase_title}
         />
         <StyledDescriptiveText>
-          {document.authors?.join("; ")} - {document.original_publication_year}
+          {document.ESC_body}
+          {document.ESC_AHTOPICS?.join("; ")} - {document.ESC_AHCONTENTTYPE}
         </StyledDescriptiveText>
-        <StyledDescriptiveText>ISBN {document.isbn}</StyledDescriptiveText>
+        <StyledDescriptiveText>URL {document.escbase_url}</StyledDescriptiveText>
         <Rating
-          value={parseInt(document.average_rating)}
+          value={parseInt(document.escbase_size)}
           precision={0.1}
           readOnly
         ></Rating>
         <StyledDescriptiveText>
-          {document.ratings_count} Ratings
+          {document.escbase_size} Size
         </StyledDescriptiveText>
       </StyledCardContent>
     </StyledCard>
