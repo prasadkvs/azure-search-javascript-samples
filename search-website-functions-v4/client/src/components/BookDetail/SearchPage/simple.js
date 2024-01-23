@@ -37,9 +37,9 @@ const StyledImg = styled(CardMedia)`
 
 export default function BookCardSimple({ document }) {
 
-  const shortenTitle = (title) => {
-    if (title.length > 20) {
-      return title.slice(0, 35) + "...";
+  const shortenTitle = (escbase_title) => {
+    if (escbase_title.length > 20) {
+      return escbase_title.slice(0, 35) + "...";
     }
     return title;
   };
@@ -49,7 +49,7 @@ export default function BookCardSimple({ document }) {
       <StyledCardActionArea href={`/details/${document.id}`}>
         <StyledCardContentImage>
           <StyledImg
-            image={document.image_url}
+            image={logo}
             title={document.escbase_title}
             alt={document.escbase_title}
           />
