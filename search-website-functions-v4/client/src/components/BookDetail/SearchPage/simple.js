@@ -41,7 +41,7 @@ export default function BookCardSimple({ document }) {
     if (escbase_title.length > 20) {
       return escbase_title.slice(0, 35) + "...";
     }
-    return title;
+    return escbase_title;
   };
 
   return (
@@ -49,7 +49,7 @@ export default function BookCardSimple({ document }) {
       <StyledCardActionArea href={`/details/${document.id}`}>
         <StyledCardContentImage>
           <StyledImg
-            image={logo}
+            image={'public/logo192.png'}
             title={document.escbase_title}
             alt={document.escbase_title}
           />

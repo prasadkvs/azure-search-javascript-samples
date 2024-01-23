@@ -62,7 +62,7 @@ export default function BookCardDetail({ document }) {
       <StyledCardContent className="bookdetail-child" align="center">
         <StyledTypographyTitle>{document.escbase_title}</StyledTypographyTitle>
         <StyledCardMedia
-          image={logo192.png}
+          image={'/public/logo192.png'}
           title={document.escbase_title}
           alt={document.escabase_title}
         />
